@@ -3,17 +3,21 @@ document.documentElement.classList.add('js-enabled');
 // Contenido dinámico
 const content = document.getElementById('main-content');
 
+// Función para actualizar el texto del cuadro y redirigir al enlace
+function updatePlaylistText(text, link) {
+  alert(text); // Muestra el texto en un cuadro de alerta
+  window.open(link, '_blank'); // Abre el enlace en una nueva pestaña
+}
+
+// Función para redirigir directamente a un enlace
+function redirectTo(link) {
+  window.open(link, '_blank');
+}
+
 document.getElementById('card-entrenos').addEventListener('click', () => {
   content.innerHTML = `
     <h3>Entrenos</h3>
     <p>Rutinas, ejercicios y guías.</p>
-  `;
-});
-
-document.getElementById('card-playlists').addEventListener('click', () => {
-  content.innerHTML = `
-    <h3>Playlists</h3>
-    <p>Listas para entrenar y cargar hierro.</p>
   `;
 });
 

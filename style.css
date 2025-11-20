@@ -68,7 +68,7 @@ header {
   width: 220px;             
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 0 24px #a00101) drop-shadow(0 0 48px #880000); /* aura rojo */
+  filter: drop-shadow(0 0 24px #ffffff) drop-shadow(0 0 48px #880000); /* aura rojo */
   will-change: transform;
   animation: floatLogo 4s ease-in-out infinite, logoPulse 3.5s ease-in-out infinite;
   z-index: 2;
@@ -132,16 +132,14 @@ header {
   max-width: calc(100% - 48px);
   transition: background-color 0.28s ease, color 0.25s ease, border-color 0.28s ease, box-shadow 0.28s ease;
   position: relative;
-  background-image: url("textura.webp");
-  background-size: cover;
-  background-blend-mode: overlay;
+  background: transparent;
   box-shadow: 0 4px 18px rgba(0,0,0,0.55), inset 0 0 16px rgba(0,0,0,0.6);
   border-radius: 10px;
 }
 .card {
   background: rgba(0,0,0,0.0);
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
   padding: 22px 50px;
   font-size: 40px;
   cursor: pointer;
@@ -153,12 +151,10 @@ header {
   max-width: calc(100% - 48px);
   text-align: center;
   text-decoration: none;
-  background-image: url("textura.webp");
-  background-size: cover;
-  background-blend-mode: overlay;
-  box-shadow: 0 0 32px 6px #ff000055, 0 0 0 4px #fff2 inset;
+  background: transparent;
+  box-shadow: 0 0 px 6px #ffffff55, 0 0 0 4px #fff2 inset;
   border-radius: 18px;
-  border: 2.5px solid #fff;
+  border: 2.5px solid #c7c7c7;
   margin-bottom: 18px;
   animation: fadeSlideIn 1.2s cubic-bezier(.6,-0.01,.3,1.01);
 }
@@ -187,7 +183,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  border: 2px solid red;
+  border: 2px solid rgb(255, 255, 255);
   opacity: 0;
   transition: 0.3s;
 }
@@ -200,7 +196,7 @@ header {
     to { opacity: 1; transform: translateY(0); }
   }
   inset: 0;
-  border: 4px solid #ff0000;
+  border: 4px solid #ffffff;
   opacity: 0;
   transition: opacity 0.6s ease, filter 0.3s ease;
   pointer-events: none;
@@ -261,4 +257,13 @@ header {
     font-size: 20px;
     padding: 14px;
   }
+}
+
+/* Botones secundarios */
+.card.small {
+  font-size: 24px;
+  padding: 12px 24px;
+  width: auto;
+  box-shadow: 0 0 16px 4px #ff000055, 0 0 0 2px #fff inset;
+  border-radius: 12px;
 }
