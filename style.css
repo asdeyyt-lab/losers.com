@@ -25,6 +25,37 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'MetalEvent', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("textura.webp");
+  opacity: 0.15;
+  animation: noiseMove 7s infinite linear;
+  z-index: 0;
+}
+
+@keyframes noiseMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
 
 header {
   text-align: center;
@@ -107,6 +138,30 @@ header {
   box-shadow: 0 4px 18px rgba(0,0,0,0.55), inset 0 0 16px rgba(0,0,0,0.6);
   border-radius: 10px;
 }
+.card {
+  background: rgba(0,0,0,0.0);
+  color: white;
+  border: 2px solid white;
+  padding: 22px 50px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'MetalEvent', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  width: 700px;
+  max-width: calc(100% - 48px);
+  text-align: center;
+  text-decoration: none;
+  background-image: url("textura.webp");
+  background-size: cover;
+  background-blend-mode: overlay;
+  box-shadow: 0 0 32px 6px #ff000055, 0 0 0 4px #fff2 inset;
+  border-radius: 18px;
+  border: 2.5px solid #fff;
+  margin-bottom: 18px;
+  animation: fadeSlideIn 1.2s cubic-bezier(.6,-0.01,.3,1.01);
+}
 
 .card:hover {
   /* Transición: fondo a blanco + borde rojo; sin animaciones de movimiento */
@@ -117,11 +172,33 @@ header {
   transform: none;
   animation: none;
 }
+.card:hover {
+  background: white;
+  color: black;
+  transform: translateY(-8px) scale(1.07);
+  box-shadow: 0 0 20px #ff0000;
+}
 
 /* Aura similar a la de `entrenos.css` */
 .card::after {
   content: "";
   position: absolute;
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid red;
+  opacity: 0;
+  transition: 0.3s;
+}
+.card:hover::after {
+  opacity: 1;
+  filter: blur(6px);
+}
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   inset: 0;
   border: 4px solid #ff0000;
   opacity: 0;
@@ -162,6 +239,19 @@ header {
 .social img:hover {
   transform: scale(1.18);
   filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+}
+
+.marca-asdey {
+  position: fixed;
+  left: 32px;
+  bottom: 24px;
+  font-size: 48px;
+  color: #fff;
+  font-family: 'MetalEvent', sans-serif;
+  opacity: 0.85;
+  z-index: 10;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px #ff0000, 0 0 4px #fff;
 }
 
 /* ======== RESPONSIVE ======== */

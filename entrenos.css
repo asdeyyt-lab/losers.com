@@ -125,6 +125,7 @@ body::before {
   font-family: 'MetalEvent';
   letter-spacing: 2px;
   position: relative;
+  background-color: rgba(0,0,0,0);
 }
 
 .opcion:hover {
