@@ -99,7 +99,7 @@ body {
   background: rgba(255,255,255,0.92);
   color: #000000;
   border-color: rgba(255,255,255,0.9);
-  box-shadow: 0 14px 56px rgba(160,0,1,0.16), 0 0 28px rgba(160,0,1,0.08);
+  box-shadow: 0 14px 56px rgba(160,0,1,0.16), 0 0 28px rgba(0, 105, 32, 0.842);
   transform: translateY(-10px) scale(1.12);
 }
 
@@ -182,9 +182,9 @@ body::before {
 }
 
 @keyframes logoPulse {
-  0% { text-shadow: 0 0 6px rgba(255,0,0,0.45); }
-  50% { text-shadow: 0 0 22px rgba(255,0,0,0.85); }
-  100% { text-shadow: 0 0 6px rgba(255,0,0,0.45); }
+  0% { text-shadow: 0 0 6px rgba(0, 173, 0, 0.664); }
+  50% { text-shadow: 0 0 22px rgba(4, 7, 163, 0.959); }
+  100% { text-shadow: 0 0 6px rgba(15, 117, 49, 0.897); }
 }
 
 /* Copyright / marca */
@@ -203,7 +203,7 @@ body::before {
 #back-button {
   font-family: 'MetalEvent', sans-serif;
   letter-spacing: 0.6px;
-  text-shadow: 0 0 8px rgba(255,0,0,0.25);
+  text-shadow: 0 0 8px rgba(5, 124, 15, 0.849);
   transition: transform 0.18s cubic-bezier(.2,.9,.3,1), background-color 0.18s;
 }
 
