@@ -12,12 +12,22 @@ html, body { height: 100%; }
 }
 
 body {
-  background-image: url("Fondo-Pagi.png");
+  background-image: url("fondo-Pag.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #ffffff;
+  font-family: 'MetalEvent', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  overflow-x: hidden;
+  position: relative;
+}
+body {
+  background: #000;
+  color: #fff;
   font-family: 'MetalEvent', sans-serif;
   display: flex;
   flex-direction: column;
@@ -26,21 +36,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-}
-
-/* Capa de difuminado sobre la imagen de fondo */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  z-index: 0;
 }
 
 body::before {
@@ -54,7 +49,7 @@ body::before {
   background: url("textura.webp");
   opacity: 0.25;
   animation: noiseMove 7s infinite linear;
-  z-index: 1;
+  z-index: 0;
 }
 
 @keyframes noiseMove {
