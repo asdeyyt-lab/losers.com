@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifiestos - LOSERS.COM</title>
+  <link rel="stylesheet" href="Manifiestos.css">
+</head>
+
+<body>
+
+  <!-- Barra superior -->
+  <header class="top-bar">
+    <img src="LOGO PRINCIPAl.png" alt="Logo Losers" class="logo">
+    <a href="index.html" class="btn-menu">Menu</a>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+
+    <h1 class="titulo">Manifiestos</h1>
+    <p class="subtitulo">Reflexiones y pensamientos brutales</p>
+
+    <!-- Contenedor de manifiestos -->
+    <div class="manifiestos-grid" id="manifiestos-grid">
+      <div class="manifiesto-card principal" onclick="abrirManifiesto(4)">
+        <h3>Esperanza</h3>
+        <p>Encontrando luz en la oscuridad</p>
+      </div>
+
+      <div class="manifiesto-card" onclick="abrirManifiesto(1)">
+        <h3>Bullying</h3>
+        <p>Encontrando mi valor más allá de las burlas</p>
+      </div>
+      
+      <div class="manifiesto-card" onclick="abrirManifiesto(2)">
+        <h3>Triste</h3>
+        <p>Una flor en el lugar equivocado</p>
+      </div>
+      
+      <div class="manifiesto-card" onclick="abrirManifiesto(3)">
+        <h3>Memorias</h3>
+        <p>El miedo al tiempo y los recuerdos</p>
+      </div>
+    </div>
+
+    <!-- Panel para mostrar el contenido completo -->
+    <div class="panel-manifiesto" id="panel-manifiesto" style="display: none;">
+      <button class="btn-cerrar" onclick="cerrarManifiesto()">✕</button>
+      <div class="manifiesto-contenido" id="manifiesto-contenido">
+        <!-- El contenido se cargará dinámicamente -->
+      </div>
+    </div>
+
+  </main>
+
+  <script src="Manifiestos.js"></script>
+</body>
+</html>

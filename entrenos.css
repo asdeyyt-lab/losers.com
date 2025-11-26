@@ -32,7 +32,7 @@ body::before {
   
   /* Textura suave */
   background: url("textura.webp");
-  opacity: 0.15;
+  opacity: 0.35;
 
   animation: noiseMove 7s infinite linear;
 }
@@ -286,4 +286,92 @@ body::before {
   box-shadow: 0 0 8px 2px #ff0000aa;
   pointer-events: none;
   z-index: 1;
+}
+
+/* ===== ESTILOS CALENDARIO ===== */
+
+.calendario {
+  width: 100%;
+  text-align: left;
+}
+
+.calendario h2 {
+  font-family: 'MetalEvent';
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px #ff0000;
+}
+
+.semana {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.dia {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.dia:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ff0000;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+}
+
+.dia h3 {
+  font-family: 'MetalEvent';
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  letter-spacing: 2px;
+}
+
+.dia p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.dia ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dia li {
+  font-size: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dia li:last-child {
+  border-bottom: none;
+}
+
+.btn-volver {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'MetalEvent';
+  letter-spacing: 2px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.btn-volver:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff0000;
 }

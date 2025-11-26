@@ -12,22 +12,12 @@ html, body { height: 100%; }
 }
 
 body {
-  background-image: url("fondo-Pag.jpg");
+  background-image: url("Fondo-Pagi.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #ffffff;
-  font-family: 'MetalEvent', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 48px;
-  overflow-x: hidden;
-  position: relative;
-}
-body {
-  background: #000;
-  color: #fff;
   font-family: 'MetalEvent', sans-serif;
   display: flex;
   flex-direction: column;
@@ -36,6 +26,21 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+}
+
+/* Capa de difuminado sobre la imagen de fondo */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 0;
 }
 
 body::before {
@@ -47,9 +52,9 @@ body::before {
   height: 100%;
   pointer-events: none;
   background: url("textura.webp");
-  opacity: 0.15;
+  opacity: 0.25;
   animation: noiseMove 7s infinite linear;
-  z-index: 0;
+  z-index: 1;
 }
 
 @keyframes noiseMove {
@@ -106,15 +111,16 @@ header {
 
 /* ======== BOTONES CENTRALES ======== */
 .menu-central {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 38px 48px; /* vertical / horizontal */
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin-top: 30px;
-  align-items: center;
   position: relative;
   z-index: 2; /* encima del grain */
+  padding: 0 24px;
 }
 
 .card {
@@ -140,22 +146,20 @@ header {
   background: rgba(0,0,0,0.0);
   color: white;
   border: 2px solid rgb(0, 0, 0);
-  padding: 22px 50px;
-  font-size: 40px;
+  padding: 48px 60px;
+  font-size: 52px;
   cursor: pointer;
   transition: 0.25s;
   font-family: 'MetalEvent', sans-serif;
   letter-spacing: 2px;
   position: relative;
-  width: 700px;
-  max-width: calc(100% - 48px);
+  width: 100%;
   text-align: center;
   text-decoration: none;
   background: transparent;
-  box-shadow: 0 0 px 6px #ffffff55, 0 0 0 4px #fff2 inset;
+  box-shadow: 0 0 0 6px #ffffff11, 0 0 0 4px #fff2 inset;
   border-radius: 18px;
   border: 2.5px solid #c7c7c7;
-  margin-bottom: 18px;
   animation: fadeSlideIn 1.2s cubic-bezier(.6,-0.01,.3,1.01);
 }
 
