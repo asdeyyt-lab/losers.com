@@ -12,22 +12,11 @@ html, body { height: 100%; }
 }
 
 body {
-  background-image: url("fondo-Pag.jpg");
+  background-image: url("Fondo-Pagi.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
-  font-family: 'MetalEvent', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 48px;
-  overflow-x: hidden;
-  position: relative;
-}
-body {
-  background: #000;
-  color: #fff;
   font-family: 'MetalEvent', sans-serif;
   display: flex;
   flex-direction: column;
