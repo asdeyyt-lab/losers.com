@@ -43,9 +43,6 @@ function setupMultiClick() {
         clickState = 1;
       } else if (clickState === 1) {
         window.open(playlistData[id].link, '_blank');
-        btn.textContent = '';
-        clickState = 2;
-      } else {
         btn.textContent = playlistData[id].default;
         clickState = 0;
       }
